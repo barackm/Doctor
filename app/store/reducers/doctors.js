@@ -22,7 +22,6 @@ const slice = createSlice({
       doctors.list = action.payload;
     },
     doctorsRequestFailed: (doctors, action) => {
-      console.log('failed to load doctors');
       doctors.loading = false;
       doctors.error = action.payload;
     },

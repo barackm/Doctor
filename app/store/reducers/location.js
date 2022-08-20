@@ -53,7 +53,6 @@ export default slice.reducer;
 const { locationSet, sendingLocation, sendingLocationFailed } = slice.actions;
 
 export const sendLocation = (location) => (dispatch) => {
-  console.log(location);
   dispatch(
     actions.apiCallBegan({
       onStart: sendingLocation.type,

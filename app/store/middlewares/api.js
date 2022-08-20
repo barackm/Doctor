@@ -42,7 +42,6 @@ const api =
           : dispatch(actions.apiCallSucceeded(response.data));
       }
     } catch (error) {
-      console.log('what is this error', error.response);
       onError
         ? dispatch({
             type: onError,

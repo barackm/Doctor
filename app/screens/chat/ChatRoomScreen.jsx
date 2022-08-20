@@ -132,7 +132,7 @@ class ChatRoomScreen extends PureComponent {
     return (
       <KeyboardAvoidingView
         style={styles.safeView}
-        behavior="padding"
+        behavior='padding'
         keyboardVerticalOffset={60}
       >
         <Screen style={styles.container}>
@@ -141,7 +141,7 @@ class ChatRoomScreen extends PureComponent {
             data={messages}
             keyExtractor={(item) => item._id.toString()}
             contentInset={{ bottom: 30 }}
-            ref="flatList"
+            ref='flatList'
             onContentSizeChange={() => {
               setTimeout(() => this.refs.flatList.scrollToEnd(), 0);
             }}
@@ -157,7 +157,7 @@ class ChatRoomScreen extends PureComponent {
                   onPress={this.handleHideEmojis}
                 >
                   <MaterialCommunityIcons
-                    name="keyboard"
+                    name='keyboard'
                     size={28}
                     color={colors.primary}
                   />
@@ -168,7 +168,7 @@ class ChatRoomScreen extends PureComponent {
                   onPress={this.handleShowEmojis}
                 >
                   <MaterialIcons
-                    name="emoji-emotions"
+                    name='emoji-emotions'
                     size={28}
                     color={colors.primary}
                   />
@@ -178,7 +178,7 @@ class ChatRoomScreen extends PureComponent {
               <View style={styles.inputContainer}>
                 <TextInput
                   multiline
-                  placeholder="Enter message"
+                  placeholder='Enter message'
                   style={styles.input}
                   value={this.state.message}
                   onChangeText={this.handleChange}
@@ -188,7 +188,7 @@ class ChatRoomScreen extends PureComponent {
               {!messageAvailable && (
                 <TouchableOpacity style={styles.cameraBtn}>
                   <MaterialCommunityIcons
-                    name="camera"
+                    name='camera'
                     size={28}
                     color={colors.primary}
                   />
@@ -197,7 +197,7 @@ class ChatRoomScreen extends PureComponent {
               {!messageAvailable && (
                 <TouchableOpacity style={styles.voiceMessage}>
                   <MaterialIcons
-                    name="keyboard-voice"
+                    name='keyboard-voice'
                     size={28}
                     color={colors.primary}
                   />
@@ -211,7 +211,7 @@ class ChatRoomScreen extends PureComponent {
                 ]}
               >
                 <MaterialCommunityIcons
-                  name="send"
+                  name='send'
                   size={15}
                   color={colors.white}
                 />

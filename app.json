@@ -1,33 +1,34 @@
 {
   "expo": {
-    "name": "Doctor",
-    "slug": "Doctor",
+    "name": "My Doctor",
+    "slug": "my-doctor",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/logo1024.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splash-img.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#3358b0"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.barack.my-doctor"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.alfred.mydoctor"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/logo1024.png"
+    },
+    "description": "My Doctor is a mobile application that was developed and presented by\n      Alfred Bisimwa, a ULK Kigali student in the\n          the academic Year 2020-2021, to help the population keep in touch with\n          their doctors.",
+    "githubUrl": "https://github.com/barackm/Doctor-App"
   }
 }
