@@ -4,13 +4,12 @@ import Toast from 'react-native-toast-message';
 
 import store from './app/store/configureStore';
 import Main from './app/Main';
-// import './app/services/socket';
+import './app/services/socket';
 import { Logs } from 'expo';
 
 Logs.enableExpoCliLogging();
 window.store = store;
 export default function App() {
-  console.log('There we go...');
   return (
     <Provider store={store}>
       <Main />

@@ -9,15 +9,13 @@ const api =
   ({ dispatch }) =>
   (next) =>
   async (action) => {
-    console.log('there we go....');
     if (action.type !== actions.apiCallBegan.type) return next(action);
     const { onStart, onError, onSuccess, data, method, url, token } =
       action.payload;
 
     if (onStart) dispatch({ type: onStart });
     try {
-      // const storedToken = await SecureStore.getItemAsync('authToken');
-      const storedToken = null;
+      const storedToken = await SecureStore.getItemAsync('authToken');
       const response = await http.request({
         baseURL,
         url,
@@ -44,7 +42,7 @@ const api =
           : dispatch(actions.apiCallSucceeded(response.data));
       }
     } catch (error) {
-      console.log(error);
+      console.log('what is this error', error.response);
       onError
         ? dispatch({
             type: onError,
