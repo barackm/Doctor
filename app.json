@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "My Doctor",
-    "slug": "my-doctor",
+    "name": "Online Doctor",
+    "slug": "online-doctor",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/logo1024.png",
@@ -28,7 +28,7 @@
     "web": {
       "favicon": "./assets/logo1024.png"
     },
-    "description": "My Doctor is a mobile application that was developed and presented by\n      Alfred Bisimwa, a ULK Kigali student in the\n          the academic Year 2020-2021, to help the population keep in touch with\n          their doctors.",
+    "description": "My Doctor is a mobile application that was developed and presented by\n      Alfred Bisimwa, a ULK Kigali student in the\n          the academic Year 2021-2022, to help the population keep in touch with\n          their doctors.",
     "githubUrl": "https://github.com/barackm/Doctor-App"
   }
 }
