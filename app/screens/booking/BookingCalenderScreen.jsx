@@ -105,7 +105,7 @@ const BookingCalenderScreen = ({
     );
 
     doctorAppointments.forEach((appointment) => {
-      if (appointment.date === JSON.stringify(date.startDate)) {
+      if (appointment.date === JSON.stringify(date)) {
         const index = slots.findIndex((s) => s.time === appointment.time);
         const newSlots = [...slots];
         newSlots[index].taken = true;
@@ -150,7 +150,7 @@ const BookingCalenderScreen = ({
       const appointment = {
         description: appointmentDescription,
         time: selectedSlot.time,
-        date: JSON.stringify(selectedDate.startDate),
+        date: JSON.stringify(selectedDate),
         doctorId: doctor._id,
       };
 
@@ -171,11 +171,11 @@ const BookingCalenderScreen = ({
   };
 
   const { name, lastName } = doctor || {};
-  const { startDate } = selectedDate || {};
+
   return (
     <KeyboardAvoidingView
       style={styles.safeView}
-      behavior="padding"
+      behavior='padding'
       keyboardVerticalOffset={60}
     >
       {loading || !name ? (
@@ -219,7 +219,7 @@ const BookingCalenderScreen = ({
                           {[1, 2, 3, 4, 5].map((item) => (
                             <FontAwesome
                               key={item}
-                              name="star"
+                              name='star'
                               size={15}
                               color={colors.gold}
                             />
@@ -235,8 +235,8 @@ const BookingCalenderScreen = ({
                   <View style={styles.calendarContainer}>
                     <Calendar
                       scrollEnabled={false}
-                      onChange={(range) => handleSelectDates(range)}
-                      startDate={startDate || new Date(2018, 3, 30)}
+                      onPress={(range) => handleSelectDates(range)}
+                      startDate={selectedDate || new Date(2018, 3, 30)}
                       numberOfMonths={1}
                       monthFormat={'MMM d, yyyy'}
                       theme={{
@@ -286,7 +286,7 @@ const BookingCalenderScreen = ({
                         nonTouchableLastMonthDayTextStyle: {},
                       }}
                       disableRange={true}
-                      orientation="horizontal"
+                      orientation='horizontal'
                     />
                   </View>
 
@@ -356,16 +356,16 @@ const BookingCalenderScreen = ({
 
                   <View style={styles.bookingInfoContainer}>
                     <AppInput
-                      placeholder="Description"
+                      placeholder='Description'
                       style={{ height: 100 }}
                       multiline={true}
-                      label="Description"
-                      name="appointmentDescription"
+                      label='Description'
+                      name='appointmentDescription'
                     />
                   </View>
 
                   <View style={styles.confirmation}>
-                    <SubmitBtn title="Confirm Appointment" />
+                    <SubmitBtn title='Confirm Appointment' />
                   </View>
                 </AppForm>
               </Screen>
